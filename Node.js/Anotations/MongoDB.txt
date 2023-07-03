@@ -1,0 +1,30 @@
+========================== MongoDB ==========================
+
+    MongoDB version: 6.0.7;
+    Mongosh version: 1.10.7
+
+
+    * Para utilizar o MongoDB pelo teminal na
+    versão 6.0, é preciso instalar o mongosh
+    ou MongoDB Shell Download.
+    (https://www.mongodb.com/try/download/shell).
+
+
+    * Após instalar o MongoDB Server e o mongosh entre,
+    na pasta bin do MongoDB, no Windows normalmente
+    segue o seguinte padrão:
+    (C://Program Files/MongoDB/Server/versao_mongodb/bin),
+    em seguida seguida digite mongod, mas antes crie uma
+    pasta data no disco C e dentro de data crie a pasta db,
+    Você pode fazer isso executando o seguinte comando:
+    (mkdir C:\data\bd).
+    
+    * Quando executar o mongod ele irá iniciar o servidor
+    do MongoDB na porta 27017 como padrão, depois de iniciar
+    abra outro terminal e entre na pasta do mongosh que você
+    instalou, na pasta bin e execute mongosh, ele irá 
+    perguntar a porta e você digita 27017, e você irá
+    entrar no sistema de gerenciamento do banco de dados
+    pelo terminal.
+
+=============================================================

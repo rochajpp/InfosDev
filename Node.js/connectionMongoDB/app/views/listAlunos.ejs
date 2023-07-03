@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/list/list.css">
+    <title>Lista</title>
+</head>
+<body>
+    <div class="Main">
+        <h1>Lista de Alunos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i < alunos.length; i++){ %>
+                    <tr>
+                        <td><%= alunos[i]._id %></td>
+                        <td><%= alunos[i].Nome %></td>
+                        <td><%= alunos[i].Idade %></td>
+                        <td><a href="rm?id=<%= alunos[i]._id %>"><button>Remover</button></a></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+        <a href="/"><button>Voltar</button></a>
+    </div>
+</body>
+</html>
