@@ -1,0 +1,17 @@
+Sempre que faço um projeto em Node, costumo usar o ejs como
+minha view, já que ela oferece uma facilidade imensa na coleta
+e integração de dados do back-end para o front-end.
+
+Mas de qualquer jeito eu procurava por cima como eu envio um
+arquivo html por alguma rota já que res.send envia uma string
+e res.render renderiza um arquivo de modelo usando um template engine,
+mas nunca vi direito.
+
+Mas hoje eu decidir estudar como que abro um arquivo html e é o que
+essa sessão vai mostrar com uma simples aplicação.
+
+Lembre-se que se quiser rodar essa aplicação você deve instalar as 
+bibliotecas do projeto então rode no terminal:
+ - npm install --omit=prod
+ ou
+ - npm install --prod

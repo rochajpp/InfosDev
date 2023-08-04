@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(25, 25, 43);
+    color: white;
+    font-family: sans-serif;
+    gap: 2rem;
+}
+
+.imagens{
+    display: flex;
+    gap: 1rem;
+}
+
+.imagens img{
+    width: 8rem;
+}
+
+button{
+    padding: 1rem 4rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+button:hover{
+    box-shadow: 1px 10px 20px black;
+}
