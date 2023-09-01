@@ -1,0 +1,21 @@
+Trazendo contéudo em C pois depois de muito tempo percebi
+uma coisa sensacional que descobri que posso fazer com as
+maravilhas do C/C++.
+
+Linguem utilizada: C;
+Biblioteca: stdlib.h;
+
+A biblioteca stdlib.h eu consigo executar comandos do cmd
+pela aplicação que eu fizer, basta eu digitar system("~comando~");
+e ele será executado, com isso eu posso iniciar várias aplicações,
+criar arquivos, acessar sites, em uma aplicação.
+
+Nesse conteúdo em específico vou fazer uma aplicação em C simples
+que irá iniciar um servidor node na máquina(Localmente claro) e
+abrir no navegador o locahost automaticamente, como se fosse um programa,
+eu acho isso importante pois em caso de projetos pequenos para amigos e
+familiares você não precisa ensinar a eles a abrir o cmd na pasta do projeto
+e executar um nodemon index.js ou um node index.js, basta apenas que o usuário
+clique no arquivo .exe feito pelo C e a aplicação irá executar o servidor e
+abrir o servidor no localhost automaticamente, além disso, com essa biblioteca
+você ainda pode fazer outras milhares de coisas e automatizar algumas.
