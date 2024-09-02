@@ -1,0 +1,55 @@
+Nesse módulo vou estudar/mostrar o uso do sequelize em um servidor
+Node.js.
+
+O estudo vai ser efeito através da documentação oficial do 
+Sequelize: https://sequelize.org/docs/v6/
+E através de algumas pesquisas e videos.
+
+Vou utilizar as seguintes bibliotecas:
+    express - Para construção  do servidor
+    mysql2 - Bilioteca do MySQL que é o que eu utilizo
+    consign - Para gerenciar alguns arquivos
+    sequelize-cli -g - Para gerenciar o banco de dados
+
+Usei o comando npm install express mysql2 consign sequelize
+
+Execute o executável IDep.exe para instalar todas 
+as dependências do projeto. Certifique-se de que o Node está instalado
+na sua máquina.
+
+
+
+
+* Configurei um servidor node normalmente e na configração do banco de dados
+fiz diferente do normal.
+
+
+- Criei o arquivo database dentro de config onde ele vai retornar um objeto {}
+com as informações do banco de dados que estou utilizando.
+
+
+- Em seguida criei uma pasta database com um arquivo connection onde eu inicio
+o sequelize e passo como parametro os dados de database.js e assim ele inicia
+o sequelize com os dados do meu bd, em seguida exporto a connection.
+
+
+- Criei na raíz do projeto um arquivo .sequelizerc onde eu vou configurar o
+e o sequelize-cli que é a biblioteca onde temos comandos que nos ajudam a
+gerenciar nosso banco de dados.
+
+    > Configurei primeiro mostrando o caminho para os dados do nosso banco de dados
+    para que o sequelize-cli encontre os dados para fazer a conexão e assim executar
+    os comandos de gerenciamento corretamente
+
+    > Em segundo lugar condigurei onde será criados nossos arquivos de migrations
+
+    > Segue comandos do sequelizerc:
+        > sequelize db:create - Cria um banco de dados com as informações do arquivo database.js.
+        > sequelize migration:create --name='nome_da_migration' - Para criar uma nova migration.
+        > sequelize db:migrate - Para confirmar a migration e atualizar o bd de acordo com a migration.
+        > sequelize db:migrate:undo - Desfaz o último update de migration.
+    > Migration será os arquivos onde iremos definir, alterar configurações do nosso banco de dados
+    e assim salvar um arquivo para cada alteração ou criação de tabela para que haja um versionamento
+    do nosso banco de dados.
+
+
