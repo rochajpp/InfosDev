@@ -52,4 +52,7 @@ gerenciar nosso banco de dados.
     e assim salvar um arquivo para cada alteração ou criação de tabela para que haja um versionamento
     do nosso banco de dados.
 
+* Os models são classes de cada tabela que herda a classe Model de Sequelize
+e configuro o método 'init' de Model usando 'super' e passando os atributos
+de cada tabela e depois exporto a classe.
 

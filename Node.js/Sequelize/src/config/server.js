@@ -9,6 +9,7 @@ require("../database/connection.js");
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("views", "./src/views/");
+app.set("view engine", "ejs");
 
 consign()
     .include("./src/controllers")

@@ -2,8 +2,7 @@ const User = require("../models/User");
 
 module.exports = {
     async store (req, res){
-        name = "name"
-        email= "email"
+        const {name, email} = req.body;
         const user = await User.create({name, email}); 
         /*
         Como os nomes de variaveis do req.body tem o mesmo nome do campo no Model
@@ -11,5 +10,9 @@ module.exports = {
         */
 
         return res.json(user);
+    },
+
+    async home(req, res){
+        res.render("home/index.ejs");
     }
 }
