@@ -55,4 +55,3 @@ gerenciar nosso banco de dados.
 * Os models são classes de cada tabela que herda a classe Model de Sequelize
 e configuro o método 'init' de Model usando 'super' e passando os atributos
 de cada tabela e depois exporto a classe.
-
