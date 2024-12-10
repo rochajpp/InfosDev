@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+td, th, td{
+  border: 1px solid white;
+}
+
+th, td{
+  padding: 1rem;
+}

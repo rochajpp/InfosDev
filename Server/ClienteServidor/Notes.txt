@@ -1,0 +1,20 @@
+================================== Server/Client ==================================
+    
+    Nesse módulo decidi mostrar o funcionamento de um Client e de um Server, e 
+    aproveitando o conteúdo mostro também como functiona e como construit uma 
+    conexão entre o Client e o Server.
+
+    * Utilizaremos React para o Client e o Node.js para o Server.
+
+    - Client => É o programa ou dispositivo onde os dados são solicitados para o 
+    servidor, no nosso projeto como exemplo vamos usar uma aplicação web, logo
+    o Client do nosso projeto é o navegador.
+
+    - Server => É o programa ou sistema que irá fornecer serviços ou recursos a 
+    outros programas, é o "centro de processamento" que irá hospedar aplicativos,
+    e terá conexão com o Banco de Dados, arquivos entre outros.
+
+    * No nosso projeto faremos um Servidor Node conectando o banco de dados MySQL
+    e assim fornecerá dados através de API's que iremos construir pelo Servidor.
+
+===================================================================================
