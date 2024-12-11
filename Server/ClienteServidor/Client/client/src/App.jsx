@@ -7,21 +7,23 @@ import './App.css'
 function App() {
   const [texts, setTexts]  = useState([]);
   const [carregando, setCarregando] = useState(true);
+  const [err, setErr] = useState(null);
 
   useEffect(() => {
     async function getDataApi(endpoint){
-      const response = await fetch("http://localhost:8080/" + endpoint);
-      const data = await response.json();
-      return data;
+      try{
+        const response = await fetch("http://localhost:8080/" + endpoint);
+        const data = await response.json();
+        return data;
+      } catch(err){
+        console.log(err);
+        setErr(err.toString());
+      }
     }
 
     async function init(){
-      setTexts(await getDataApi("api/getAllTexts"));
+      setTexts(await getDataApi("api/getAllNotes"));
       setCarregando(false);
-    }
-
-    function popUp(){
-
     }
     
     init();
@@ -31,6 +33,17 @@ function App() {
     return (
       <>
         <p>Carregando...</p>
+      </>
+    )
+  }
+
+  if(err != null){
+    return(
+      <>
+        <h2>Erro na conexão com o Servidor</h2>
+        <h3>{err}</h3>
+        <p>Verifique se o servidor está funcionando corretamente</p>
+        <button onClick={() => location.href = "/"}>Tentar novamente</button>
       </>
     )
   }
@@ -56,7 +69,7 @@ function App() {
         </tbody>
       </table>
 
-      <button onClick={popUp()}>Adicionar mais</button>
+      <button>Adicionar mais</button>
     </>
   )
 }

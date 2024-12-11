@@ -1,11 +1,11 @@
-class Text{
+class Note{
     constructor(connection){
         this._connection = connection;
     }
 
     async getAllTexts(){
         try{
-            const [rows] = await this._connection.query("SELECT * FROM text");
+            const [rows] = await this._connection.query("SELECT * FROM note");
             return rows;
         } catch(err){
             console.err("Error getting data");
@@ -15,5 +15,5 @@ class Text{
 }
 
 module.exports = () =>{
-    return Text;
+    return Note;
 }

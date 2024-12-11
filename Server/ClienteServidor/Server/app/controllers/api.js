@@ -1,9 +1,9 @@
-module.exports.getAllTexts = async (app, req, res) => {
+module.exports.getAllNotes = async (app, req, res) => {
     const connection = require('../../config/database');
 
-    const Text = new app.app.models.Text(connection);
+    const Note = new app.app.models.Note(connection);
 
-    const texts = await Text.getAllTexts();
+    const notes = await Note.getAllTexts();
 
-    res.send(texts);
+    res.send(notes);
 }
