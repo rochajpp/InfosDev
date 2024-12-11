@@ -17,7 +17,7 @@ module.exports.saveNote = async (app, req, res) => {
 
     const response = await Note.saveNote(data);
 
-    console.log(response.affectedRows);
+    console.log("Colunas afetadas: " + response.affectedRows);
 
     res.redirect("http://localhost:5173/");
     return;

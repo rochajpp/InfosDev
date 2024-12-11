@@ -11,6 +11,9 @@ function App() {
   const [popup, setPopup] = useState(false);
 
   useEffect(() => {
+
+    document.title = "Servidor/Cliente"
+
     async function getDataApi(endpoint){
       try{
         const response = await fetch("http://localhost:8080/" + endpoint);
