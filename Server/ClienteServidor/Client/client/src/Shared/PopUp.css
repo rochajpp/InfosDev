@@ -16,7 +16,6 @@
 }
 
 .box{
-    min-height: 60%;
     width: 60%;
     padding: 2rem;
     background-color: white;
@@ -26,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .input-area{

@@ -68,6 +68,7 @@ function App() {
           </div>
 
           <button>Salvar</button>
+          <button type="button" onClick={() => setPopup(false)}>Fechar</button>
         </form>
       </PopUp>
 
