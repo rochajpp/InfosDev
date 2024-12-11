@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react'
 
 import './App.css'
 
-
+import PopUp from "./Shared/PopUp"
 
 function App() {
   const [texts, setTexts]  = useState([]);
   const [carregando, setCarregando] = useState(true);
   const [err, setErr] = useState(null);
+  const [popup, setPopup] = useState(false);
 
   useEffect(() => {
     async function getDataApi(endpoint){
@@ -28,7 +29,6 @@ function App() {
     
     init();
   }, [])
-
   if(carregando){
     return (
       <>
@@ -50,6 +50,24 @@ function App() {
 
   return (
     <>
+      <PopUp state={popup}>
+        <form action="http://localhost:8080/api/saveNote" method="POST" className="box">
+          <h1>Nova nota</h1>
+
+          <div className="input-area">
+            <label>Título: </label>
+            <input name="title" placeholder="Insira o título da nota" required />
+          </div>
+
+          <div className="input-area">
+            <label>Texto:</label>
+            <textarea name="text" placeholder="Insira o texto da nota" required></textarea>
+          </div>
+
+          <button>Salvar</button>
+        </form>
+      </PopUp>
+
       <h1>Notas</h1>
       <table>
         <thead>
@@ -69,7 +87,7 @@ function App() {
         </tbody>
       </table>
 
-      <button>Adicionar mais</button>
+      <button onClick={() => setPopup(true)}>Adicionar mais</button>
     </>
   )
 }

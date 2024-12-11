@@ -12,6 +12,17 @@ class Note{
             return null;
         }
     }
+
+    async saveNote(note){
+        try{
+            const [rows] = await this._connection.query("INSERT INTO note (title, text) VALUES ('" + note.title + "', '" + note.text + "')");
+            
+            return rows;
+        }catch(err){
+            console.log("Error saving data: " + err);
+            return null;
+        }
+    }
 }
 
 module.exports = () =>{
